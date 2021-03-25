@@ -16,7 +16,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App"> 
       <div className="black-nav">
         <div>이재성의 개발 Blog</div>
       </div>
