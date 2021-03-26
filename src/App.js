@@ -1,6 +1,9 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import img1 from './img/코트1.jpg';
+import img2 from './img/고기1.jpg';
+import img3 from './img/신발1.jpg';
 
 function App() {
 
@@ -14,24 +17,51 @@ function App() {
     newArray[0] = '여자 코트 추천';
     글제목변경(newArray);
   }
+  function 초기화(){
+    하트변경(0);
+    좋아요변경(0);
+    싫어요변경(0);
+  }
 
   return (
     <div className="App"> 
       <div className="black-nav">
         <div>이재성의 개발 Blog</div>
       </div>
-      <button onClick={ 제목바꾸기 }>여자 코트 추천</button>
+      {/* <button onClick={ 제목바꾸기 }>여자 코트 추천</button> */}
+      <button onClick={ 초기화 }>클릭 초기화</button>
       <div className="list">
+        <img className="img" src={ img1 }/  >
         <h3> { 글제목[0] } <span onClick={ () => { 하트변경(하트 + 1) } } >❤️</span> { 하트 } </h3>
         <p>3월 17일 발행</p>
         <hr/>
       </div>
       <div className="list">
+      <img className="img" src={ img2 }/>
         <h3> { 글제목[1] } <span onClick={ () => { 좋아요변경(좋아요 + 1) } } >👍</span> { 좋아요 } </h3>
         <p>3월 18일 발행</p>
         <hr/>
       </div>
       <div className="list">
+      <img className="img" src={ img3 }/>
+        <h3> { 글제목[2] } <span onClick={ () => { 싫어요변경(싫어요 + 1) } } >😩</span> { 싫어요 } </h3>
+        <p>3월 19일 발행</p>
+        <hr/>
+      </div>
+      <div className="list">
+      <img className="img" src={ img3 }/>
+        <h3> { 글제목[2] } <span onClick={ () => { 싫어요변경(싫어요 + 1) } } >😩</span> { 싫어요 } </h3>
+        <p>3월 19일 발행</p>
+        <hr/>
+      </div>
+      <div className="list">
+      <img className="img" src={ img3 }/>
+        <h3> { 글제목[2] } <span onClick={ () => { 싫어요변경(싫어요 + 1) } } >😩</span> { 싫어요 } </h3>
+        <p>3월 19일 발행</p>
+        <hr/>
+      </div>
+      <div className="list">
+      <img className="img" src={ img3 }/>
         <h3> { 글제목[2] } <span onClick={ () => { 싫어요변경(싫어요 + 1) } } >😩</span> { 싫어요 } </h3>
         <p>3월 19일 발행</p>
         <hr/>
